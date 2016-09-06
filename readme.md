@@ -1,49 +1,16 @@
-docker-zsh-completion
-=====================
+# docker-zsh-completion
+
+My personal fork of felixr's docker completion plugin. 
 
 A [zsh](http://zsh.org) completion for
 [docker](http://docker.io). This completion has been merged into
 docker official repository and receives various updates. This
 repository is kept up-to-date but, except for one small detail, there
 should not be no difference.
- 
-How to Install
---------------
 
-For [Oh My Zsh](http://ohmyz.sh/) users:
-```sh
-mkdir -p ~/.oh-my-zsh/plugins/docker/
-curl -fLo ~/.oh-my-zsh/plugins/docker/_docker https://raw.github.com/felixr/docker-zsh-completion/master/_docker
-```
-And then in your `~/.zshrc` file, add `docker` to the plugins list. Then run `exec zsh` to restart zsh.
+# Contributors
 
-For [Prezto](https://github.com/sorin-ionescu/prezto) users:
-```sh
-curl -fLo ~/.zprezto/modules/completion/external/src/_docker \
-  https://raw.github.com/felixr/docker-zsh-completion/master/_docker
-exec zsh
-```
-This assumes you have the `completions` module enabled in your `~/.zpreztorc` file.
-
-With [zplug](https://github.com/b4b4r07/zplug):
-```sh
-zplug "felixr/docker-zsh-completion"
-```
-
-For other Zsh users:
-Drop the `_docker` file into your `~/.zsh/completion` directory, then reset zsh:
-
-```sh
-mkdir -p ~/.zsh/completion
-curl -fLo ~/.zsh/completion/_docker https://raw.github.com/felixr/docker-zsh-completion/master/_docker
-exec zsh
-```
-This assumes `~/.zsh/completion` is in Zsh's `$fpath` [parameter](http://zsh.sourceforge.net/Doc/Release/Parameters.html#index-fpath). Run `echo $fpath` to check.
-
-
-Contributors
-------------
-
+* [ninrod](http://github.com/ninrod)
 * [felixr](http://github.com/felixr)
 * [vincentbernat](http://github.com/vincentbernat)
 * [sdurrheimer](https://github.com/sdurrheimer)
@@ -55,8 +22,7 @@ are applied this way:
     $ git format-patch --stdout -1 d736a9d2c3758fcc4eac0b62e9c7b128388021c1 -- ./_docker | \
         (cd ~/.zsh/third-party/docker-zsh-completion ; git am -p4 )
 
-License (BSD License)
-------------------------------
+# License (BSD License)
 
     Copyright (c) 2013, Felix Riedel
     All rights reserved.
